@@ -1,0 +1,224 @@
+{% extends 'front/layout/main.html' %}
+{% load staticfiles shiji_tags %}
+{% block head %}
+   <link rel="stylesheet" href="{% static 'css/productDynamic.css' %}">
+{% endblock %}
+{% block body %}
+  {% include 'front/layout/nav.html' %}
+  <div class="container">
+    <div class="grant-store">市集产品</div>
+    <div class="grant-welcome">市集提供三种不同的产品服务: 入驻市集平台，市集平台源码出售，商城定制化开发</div>
+    <div class="row order-list">
+      <div class="order-item order-item-left">
+        <div class="flex flex-between">
+          <div class="flex-one">
+            <div class="order-title">入驻市集</div>
+            <div class="order-introduce">以商家的身份入驻市集平台，享受市集平台的客户资源</div>
+          </div>
+          <img src="{% static 'images/xuzhang_yin@2x.png' %}" alt="" class="level-img">
+        </div>
+        <div class="price">¥2000 <span>RMB/年</span></div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>1.一键入住,15 分钟完成整个流程</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>2.提供操作技术,商务推广等培训</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>3.享受平台的所有客户资源</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>4.需提供 1 件积分换购商品上平台</div>
+        </div>
+         <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>4.需提供 1 件积分拼购商品上平台</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>6.享受平台 7x24小时技术服务</div>
+        </div>
+        <div class="flex list-item">
+         <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>8.享受平台节日活动推广10次</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>9.享受平台平时活动推广3次</div>
+        </div>
+        <div class="order-btn flex-center">联系我们</div>
+      </div>
+      <div class="order-item order-item-center">
+        <div class="flex flex-between">
+          <div class="flex-one">
+            <div class="order-title">商城定制化开发</div>
+            <div class="order-introduce">根据客户的需求定制开发，开发周期短</div>
+          </div>
+          <img src="{% static 'images/xuzhang_jin@2x.png' %}" alt="" class="level-img">
+        </div>
+        <div class="price">¥5-50W <span>RMB</span></div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>1.需求定制化开发服务</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>2.最长一个月开发完成整个项目</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>3.一对一项目经理服务</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>4.一到三个月的免费维护</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>5.源码交付</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>6.容器化部署</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>7.高 TPS，承载用户量大</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>8.完备的后台基础功能和数据统计</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>9.赠送商城 BI 平台</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>10.更多功能，请联系我们</div>
+        </div>
+        <div class="order-btn flex-center">联系我们</div>
+      </div>
+      <div class="order-item order-item-right">
+        <div class="flex flex-between">
+          <div class="flex-one">
+            <div class="order-title">市集源码出售</div>
+            <div class="order-introduce">源码出售，专人对接，让您能自己动手改造</div>
+          </div>
+          <img src="{% static 'images/xuzhang_tong@2x.png' %}" alt="" class="level-img">
+        </div>
+        <div class="price">¥20000 <span>RMB</span></div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>1.百分之百的源码交互</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>2.专人对接，让你读懂代码</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>3.帮助容器化部署上线</div>
+        </div>
+         <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>4.协助提高 TPS，承载大量用户</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>5.前三个月派专人随时为您服务</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>6.页面，LOGO 协助修改</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>7.协助把市集打造成你的产品</div>
+        </div>
+        <div class="flex list-item">
+          <img src="{% static 'images/titie@2x.png' %}" alt="">
+          <div>8.详细的信心请联系我们咨询</div>
+        </div>
+        <div class="order-btn flex-center">联系我们</div>
+      </div>
+    </div>
+    <div class="arrogate-title">我们擅长的</div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 arrogate-item">
+        <div class="flex alcenter title">
+          <img src="{% static 'images/titie_chanpin@2x.png' %}" alt="">
+          <div>产品设计</div>
+        </div>
+        <div class="arrogate-des">深入了解产品需求 明确产品规划和目标人群定义，设计出创新更具有实效性和针对性产品， 扁平化设计、Material Design、微信风格设计等</div>
+        <div class="percent-container">
+          <div class="percent-num flex-center">100%</div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 arrogate-item">
+        <div class="flex alcenter title">
+          <img src="{% static 'images/titie_chanpin@2x.png' %}" alt="">
+          <div>技术开发</div>
+        </div>
+        <div class="arrogate-des">基于公司目前成熟得产品体系，快速得设计和开发APP 和小程序，开发周期短，上线快， 各类行业APP应用定制。WEB，安卓、苹果三种客户端。开发效率高，维护低成本</div>
+        <div class="percent-container">
+          <div class="percent-num flex-center">100%</div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 arrogate-item">
+        <div class="flex alcenter title">
+          <img src="{% static 'images/titie_chanpin@2x.png' %}" alt="">
+          <div>技术运维</div>
+        </div>
+        <div class="arrogate-des">为企业提供高效的运维服务，防止内部数据泄密，数据丢失，提供K8S+Docker的容器化部署，BI平台加数据实时监控</div>
+        <div class="percent-container">
+          <div class="percent-num flex-center">100%</div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 arrogate-item">
+        <div class="flex alcenter title">
+          <img src="{% static 'images/titie_chanpin@2x.png' %}" alt="">
+          <div>市场推广</div>
+        </div>
+        <div class="arrogate-des">致力于互联网营销，网络推广，专注于信息流推广，ASO推广，应用商店CPD推广，让世界发现您的产品，让与客户转化更精准</div>
+        <div class="percent-container">
+          <div class="percent-num flex-center">100%</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 tab-item active">
+        <div>产品动态</div>
+      </div>
+    </div>
+    <div class="row dynamic-list">
+      {% for news in news_list %}
+          <a href="{% url 'news_detail'  news.id %}">
+              <div class="col-sm-12 col-md-6 dynamic-item flex">
+                <img src="{% url 'index' %}media/{{ news.img }}" alt="" class="dynamic-img">
+                <div class="flex-one dynamic-item-detail">
+                  <div class="dynamic-title">{{ news.title }}</div>
+                  <div class="dynamic-des">{{ news.excerpt }}</div>
+                </div>
+              </div>
+          </a>
+      {% endfor %}
+    </div>
+    <div class="check-more"><a href="{% url 'news' %}" style="color:orange">查看更多>></a></div>
+  </div>
+  {% include 'front/layout/ask.html' %}
+  <div class="common-footer">
+    {% include 'front/layout/bottom.html' %}
+  </div>
+  <div class="apply-dialog">
+    {% include 'front/layout/message.html' %}
+  </div>
+{% endblock %}
+{% block script %}
+{% endblock %}
+
+

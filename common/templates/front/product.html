@@ -1,0 +1,72 @@
+{% extends 'front/layout/main.html' %}
+{% load staticfiles shiji_tags %}
+{% block head %}
+   <link rel="stylesheet" href="{% static 'css/productIntroduce.css' %}">
+{% endblock %}
+{% block body %}
+  <div class="product-introduce-top">
+      {% include 'front/layout/nav.html' %}
+      <div class="top-content">
+          <div class="title">集市商城app</div>
+          <div class="des">让人人都能拥有自己的商城，轻松的购物体验</div>
+          <div class="flex flex-center">
+            <img src="{% static 'images/weixin.png' %}" alt="" class="qr-code-img">
+            <div class="flex flex-column flex-around download">
+              <img src="{% static 'images/android@2x.png' %}" alt="" class="android-download">
+              <img src="{% static 'images/ios@2x.png' %}" alt="" class="ios-download">
+            </div>
+          </div>
+      </div>
+  </div>
+  <div class="product-introduce-content">
+    <div class="container">
+      <div class="introduce-item flex flex-between">
+        <div>
+          <img src="{% static 'images/phone_one@2x.png' %}" alt="" class="phone-img">
+          <div class="introduce-sub">APP 首页</div>
+        </div>
+        <div class="flex-one introduce-item-word">
+          <div class="introduce-title">功能总揽</div>
+          <div class="introduce-des">
+              秒杀: 限时特价促销，刺激消费; 拼团: 裂变传播拉新，邀好友一起购买; 社交分销: 招募分销员，让分销员帮你卖货; 优惠券: 注册购物获取优惠券，优惠券抵扣，购物更优惠；折扣：满足指定条件享受折扣
+              会员积分：赚积分当钱花，可以购物，可以换钱，活跃客户；积分商城: 积分直接购物
+          </div>
+        </div>
+      </div>
+      <div class="introduce-item flex flex-between row-reverse">
+        <div>
+          <img src="{% static 'images/phone_two@2x.png' %}" alt="" class="phone-img">
+          <div class="introduce-sub">无限分类，购物方便！</div>
+        </div>
+        <div class="flex-one introduce-item-word">
+          <div class="introduce-title">数据共享</div>
+          <div class="introduce-des">商户之间共享一份用户数据，您的客户也是我的客户，你我不分家，充分利用了平台所有的用户资源。为商家带来更多的流量</div>
+        </div>
+      </div>
+      <div class="introduce-item flex flex-wrap flex-between store">
+        <div class="store-imgs">
+          <img src="{% static 'images/phone_three@2x.png' %}" alt="" class="phone-img store-img">
+          <img src="{% static 'images/phone_four@2x(1).png' %}" alt="" class="phone-img">
+        </div>
+        <div class="flex-one introduce-item-word">
+          <div class="introduce-title">商家入驻</div>
+          <div class="introduce-des">15 分钟开通自己的商城，无需二次开发，一键即可上线，低成本，高收益；为你组合APP+小程序+微商城，搭建移动电商平台；的精美界面，经过设计团队多年研发改造，拥有更多不丰富即出彩的广告位，让电商平台变得更有冲击力</div>
+        </div>
+      </div>
+      <div class="text-center introduce-item my">
+        <div class="introduce-title">快速推广</div>
+        <div class="introduce-des">积分购买: 邀请注册，邀请购买，可以获得积分奖励，积分可以直接购物，也可以直接兑换成现金提现；拼团购：不用花一分钱，只要邀请好友助力，就可以获得精美的商品；这个两个功能可以快速推广 APP</div>
+      </div>
+      <img src="{% static 'images/phone_four@2x.png' %}" alt="" class="my-img">
+    </div>
+  </div>
+  {% include 'front/layout/ask.html' %}
+  <div class="common-footer">
+    {% include 'front/layout/bottom.html' %}
+  </div>
+  <div class="apply-dialog">
+    {% include 'front/layout/message.html' %}
+  </div>
+{% endblock %}
+{% block script %}
+{% endblock %}

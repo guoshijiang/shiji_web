@@ -1,0 +1,25 @@
+{% load staticfiles shiji_tags %}
+<div class="nav-container container">
+  <div class="col-lg-2 col-md-3 col-4 logo-title">市集</div>
+  <div class="nav-menu">
+    <div class="nav-menu-item menu_item_top"></div>
+    <div class="nav-menu-item menu_item_center"></div>
+    <div class="nav-menu-item menu_item_bottom"></div>
+  </div>
+  <div class="nav-box col-lg-8 col-md-9 col-sm-8 col-12">
+    <li><a href="{% url 'index' %}" class="nav-item active">首页</a></li>
+    <li><a href="{% url 'product'  %}" class="nav-item">产品介绍</a></li>
+    <li><a href="{% url 'dynamic' %}" class="nav-item">产品动态</a></li>
+    <li><a href="{% url 'about' %}" class="nav-item">关于我们</a></li>
+    <div class="apply-btn">申请试用</div>
+  </div>
+</div>
+<div class="nav-list">
+  <div class="nav-inner">
+    <li><a href="{% url 'index' %}" class="nav-item active">首页</a></li>
+    <li><a href="{% url 'product'  %}" class="nav-item">产品介绍</a></li>
+    <li><a href="{% url 'dynamic' %}" class="nav-item">产品动态</a></li>
+    <li><a href="{% url 'about' %}" class="nav-item">关于我们</a></li>
+    <div class="apply-btn">申请试用</div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+{% extends 'front/layout/main.html' %}
+{% load staticfiles shiji_tags %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="stylesheet" href="{% static 'css/comment.css'%}">
+{% endblock %}
+{% block body %}
+  <div class="comment-top">
+    <div class="nav-container container">
+      <div class="col-lg-2 col-md-3 col-4 logo-title">市集</div>
+      <!-- 移动端显示 -->
+      <div class="nav-menu">
+        <div class="nav-menu-item menu_item_top"></div>
+        <div class="nav-menu-item menu_item_center"></div>
+        <div class="nav-menu-item menu_item_bottom"></div>
+      </div>
+      <div class="nav-box col-lg-8 col-md-9 col-sm-8 col-12">
+        <li><a href="{% url 'index' %}" class="nav-item">首页</a></li>
+        <li><a href="{% url 'product' %}" class="nav-item">产品介绍</a></li>
+        <li><a href="{% url 'dynamic' %}" class="nav-item">产品动态</a></li>
+        <li><a href="{% url 'about' %}" class="nav-item">关于我们</a></li>
+        <div class="apply-btn">申请试用</div>
+      </div>
+    </div>
+  </div>
+  <!-- 移动端显示 -->
+  <div class="nav-list">
+    <div class="nav-inner">
+      <li><a href="{% url 'index' %}" class="nav-item">首页</a></li>
+      <li><a href="{% url 'product' %}" class="nav-item">产品介绍</a></li>
+      <li><a href="{% url 'dynamic' %}" class="nav-item">产品动态</a></li>
+      <li><a href="{% url 'about' %}" class="nav-item">关于我们</a></li>
+      <div class="apply-btn">申请试用</div>
+    </div>
+  </div>
+  <div class="comment-list container">
+    {% for comment in comment_list %}
+    <div class="comment-item flex">
+      <img src="{% url 'index' %}media/{{ commet.photo }}" alt="" class="user-avatar">
+      <div class="flex-one comment-right">
+        <div class="flex alcenter">
+          <div class="user-name">{{ comment.name }}</div>
+          <div class="time">{{ comment.created_at | hdate }}</div>
+        </div>
+        <div class="stars flex alcenter">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+        </div>
+        <div class="comment-content">{{ comment.content }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+   {% include 'front/layout/ask.html' %}
+  <div class="common-footer">
+    {% include 'front/layout/bottom.html' %}
+  </div>
+  <div class="apply-dialog">
+  {% include 'front/layout/message.html' %}
+  </div>
+{% endblock %}
+{% block script %}
+{% endblock %}

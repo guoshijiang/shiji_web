@@ -1,0 +1,214 @@
+{% extends 'front/layout/main.html' %}
+{% load staticfiles shiji_tags %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+{% endblock %}
+{% block body %}
+  <div class="home-top">
+      {% include 'front/layout/nav.html' %}
+      <div class="top-content">
+          <div class="top-content-left">
+            <div class="goal">Our goal</div>
+            <div class="des">Make it a simple matter
+              to own your own mall</div>
+            <div class="target">我们的目标——
+              让拥有自己的商城变成一件简单的事儿
+            </div>
+            <a href="{% url 'product' %}"><div class="know-more">了解更多</div></a>
+          </div>
+          <img src="{% static 'images/phone@2x.png' %}" alt="" class="phone-img">
+      </div>
+  </div>
+  <div class="product-item">
+    <div class="line"></div>
+    <div class="title">市集商城系统</div>
+    <div class="des">
+      市集是天津木姜子科技有限公司知鱼定制团队旗下品牌，知鱼定制团队8年专注电商的技术沉淀和行业积累，
+      专业打造行业领先，功能强大，易用性强，扩展性强产品，市集商城 SAAS 平台由市集商城系统、
+      市集 IM 平台、市集积分系统，市集财务系统，市集直播系统等系统构成。
+    </div>
+    <div class="flex flex-wrap">
+      <div class="list-item col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="{% static 'images/index_pic5@2x.png' %} " alt="">
+        <div class="item-title">市集商城系统</div>
+        <div class="item-des">
+          公众号、小程序、H5多端合一，功能强大
+          稳定，可二次开发，满足企业商家入驻，
+          零售、批发、分销等多种业务需求，
+          性价比高。
+        </div>
+      </div>
+      <div class="list-item col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="{% static 'images/index_pic2@2x.png' %}" alt="">
+        <div class="item-title">市集 IM 平台</div>
+        <div class="item-des">
+          通过抽象建模将业务软件进行了框架化和平台化，并通过搭载同时支撑多协议/多标准的交易引擎/数据引擎，实现了业务模式的可定制/可配置
+        </div>
+      </div>
+      <div class="list-item col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="{% static 'images/index_pic5@2x(1).png' %}" alt="">
+        <div class="item-title">市集直播系统</div>
+        <div class="item-des">
+          能够摆脱随时被封号的风险，营销更自由；商家可以根据自己的需求，任意增加或删减功能。最重要的一点是，独自进行直播卖货系统开发，可以迅速建立起私域流量，且通过带货获得的粉丝都属于自己，从而可以迅速打造品牌
+        </div>
+      </div>
+      <div class="list-item col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="{% static 'images/index_pic4@2x.png' %}" alt="">
+        <div class="item-title">市集积分</div>
+        <div class="item-des">
+          邀请注册获取积分，多级分销积分奖励，消费积分管理费，积分可兑现，满足产品快速推广的方式
+        </div>
+      </div>
+      <div class="list-item col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="{% static 'images/index_pic5@2x.png' %}" alt="">
+        <div class="item-title">市集财务系统</div>
+        <div class="item-des">
+          能够摆脱随时被封号的风险，营销更自由；商家可以根据自己的需求，任意增加或删减功能。最重要的一点是，独自进行直播卖货系统开发，可以迅速建立起私域流量，且通过带货获得的粉丝都属于自己，从而可以迅速打造品牌
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="line"></div>
+    <div class="title">产品优势</div>
+    <div class="des">
+      支持更完整商业场景的全渠道电商平台
+    </div>
+    <div class="product-content flex flex-wrap">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="advantage-item flex flex-end">
+          <div>
+            <div class="advantage-title text-right">客户关怀</div>
+            <div class="advantage-des text-right">公司动态在线推送运营人员上门拜访</div>
+          </div>
+          <img src="{% static 'images/index_care@2x.png' %}" alt="">
+        </div>
+        <div class="advantage-item  flex flex-end">
+          <div>
+            <div class="advantage-title text-right">一键上线商城</div>
+            <div class="advantage-des text-right">市集是一个  SAAS 平台，客户可以在 15 分钟内开通自己的商城，无需二次开发，一键即可上线，低成本，高收益</div>
+          </div>
+          <img src="{% static 'images/index_shangcheng@2x.png'%}" alt="">
+        </div>
+        <div class="advantage-item flex flex-end">
+          <div>
+            <div class="advantage-title text-right">专业指导</div>
+            <div class="advantage-des text-right">专业人员提供一对一服务产品使用咨询，在线培训</div>
+          </div>
+          <img src="{% static 'images/index_care@2x.png' %}" alt="">
+        </div>
+        <div class="advantage-item flex flex-end">
+          <div>
+            <div class="advantage-title text-right">问题响应</div>
+            <div class="advantage-des text-right">无等待响应系统升级维护及时通知</div>
+          </div>
+          <img src="{% static 'images/index_wenti@2x.png' %}" alt="">
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 product-img flex flex-center">
+        <img src="{% static 'images/index_chanpinyoushi@2x.png' %} " alt="" class="advantage-center-img">
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="advantage-item flex">
+          <img src="{% static 'images/bingzhuangtu@2x.png' %}" alt="">
+          <div class="text-left">
+            <div class="advantage-title">数据共享</div>
+            <div class="advantage-des text-left">商户之间共享一份用户数据，您的客户也是我的客户，你我不分家，充分利用了平台所有的用户资源。</div>
+          </div>
+        </div>
+        <div class="advantage-item flex">
+          <img src="{% static 'images/index_jishu@2x.png' %}" alt="">
+          <div class="text-left">
+            <div class="advantage-title"> 7×10小时在线技术支持</div>
+            <div class="advantage-des text-left"></div>
+          </div>
+        </div>
+        <div class="advantage-item flex">
+          <img src="{% static 'images/index_celiang@2x.png' %}" alt="">
+          <div class="text-left">
+            <div class="advantage-title">上门实施</div>
+            <div class="advantage-des text-left">技术牛上门服务手把手解决系统操作问题</div>
+          </div>
+        </div>
+        <div class="advantage-item flex">
+          <img src="{% static 'images/index_shichang@2x.png' %} " alt="">
+          <div class="text-left">
+            <div class="advantage-title">快速占领市场</div>
+            <div class="advantage-des text-left">市集中的积分赠送方式，积分可以兑换成现金提走，0 元购买商品等功能能够让市集快速进入市场</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="line"></div>
+    <div class="title">智能精确的数据展示——
+      开发商城业务</div>
+    <div class="des">
+      Intelligent and accurate data presentation OA office system
+    </div>
+    <div class="flex-wrap">
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 business-item">
+        <img src="{% static 'images/index_tiyan@2x.png' %}" alt="">
+        <div class="percent">100%</div>
+        <div class="business-des">快捷的体验</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 business-item">
+        <img src="{% static 'images/index_fazhan@2x.png' %}" alt="">
+        <div class="percent">100%</div>
+        <div class="business-des">发展开发</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 business-item">
+        <img src="{% static 'images/index_shichangyingxiao@2x.png' %}" alt="">
+        <div class="percent">100%</div>
+        <div class="business-des">市场营销</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 business-item">
+        <img src="{% static 'images/index_haoping@2x.png' %}" alt="">
+        <div class="percent">100%</div>
+        <div class="business-des">好评率</div>
+      </div>
+    </div>
+  </div>
+  <!-- 评价 -->
+  <div class="evaluate-container">
+    <div class="container">
+      <div class="line"></div>
+      <div class="row flex-between alcenter">
+        <div class="evaluate-title col-xs-12 col-sm-12 col-md-6 col-lg-6">合作伙伴相关评价——市集商城</div>
+        <a href="{% url 'comment' %}" class="check-more flex-center">查看更多</a>
+      </div>
+      <div class="row evaluate-content">
+        {% for commet in comment_list %}
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="flex alcenter star">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+            <img src="{% static 'images/star@2x.png' %}" alt="">
+          </div>
+          <div class="evaluate-des">{{ commet.content }}</div>
+          <div class="flex alcenter user-detail">
+            <img src="{% url 'index' %}media/{{ commet.photo }}" alt="">
+            <div>
+              <div>{{ commet.name }}</div>
+              <div class="user-position">{{ commet.company }}: {{ commet.position }}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% include 'front/layout/ask.html' %}
+  <div class="common-footer">
+    {% include 'front/layout/bottom.html' %}
+  </div>
+  <div class="apply-dialog">
+    {% include 'front/layout/message.html' %}
+  </div>
+{% endblock %}
+{% block script %}
+{% endblock %}

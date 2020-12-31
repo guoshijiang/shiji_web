@@ -1,0 +1,37 @@
+{% extends 'front/layout/main.html' %}
+{% load staticfiles shiji_tags %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="stylesheet" href="{% static 'css/news.css'%}">
+{% endblock %}
+{% block body %}
+   {% include 'front/layout/nav.html' %}
+   <img src="{% static 'images/xinwen_banner@2x.png' %}" alt="" class="banner-img">
+   <div class="news-list container">
+    {% for news in news_list %}
+     <div class="news-item flex">
+        <div class="news-img-container">
+            <img src="{% url 'index' %}media/{{ news.img }}" alt="" class="news-img">
+        </div>
+        <div class="news-content flex-one">
+            <div class="news-title">{{ news.title }}</div>
+            <div class="news-des">{{ news.excerpt }}</div>
+            <a href="{% url 'news_detail' news.id %}"><div class="more">查看详情</div></a>
+        </div>
+     </div>
+   {% endfor %}
+  </div>
+    {% include 'front/layout/ask.html' %}
+   <div class="common-footer">
+    {% include 'front/layout/bottom.html' %}
+   </div>
+   <div class="apply-dialog">
+    {% include 'front/layout/message.html' %}
+   </div>
+{% endblock %}
+{% block script %}
+{% endblock %}
+
+
+
+

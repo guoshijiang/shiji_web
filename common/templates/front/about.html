@@ -1,0 +1,106 @@
+{% extends 'front/layout/main.html' %}
+{% load staticfiles shiji_tags %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/about.css'%}">
+{% endblock %}
+{% block body %}
+  {% include 'front/layout/nav.html' %}
+  <img src="{% static 'images/about_banner@2x.png' %}" alt="" class="banner-img">
+  <div class="container">
+    <div class="content-item">
+      <div class="common-title">关于我们</div>
+      <div class="content-word">天津木姜子科技知鱼定制团队拥有一支技术专业、经验丰富、创新独特、策划一流、锐意向上的优秀团队。设计开发团队来自百度，阿里，美团和汽车之家等大型互联网公司，都是该行业五年以 上经验的高端人才，且身深谙互联网的核心价值，
+          积累了大量的行业解决方不案和核心技术。且对不同客户需求分析、沟通方法等均有深刻的感悟。在此基础上采用"质量精品、过程精品、服务精品"的流程控制方法，确保了优质的产品服务。并连网络为客户提供独特的服务 之一在于“泛策划”思路的应用。
+          并连网络能从项目前期即深度介入客户的需求，并进行专业准确的策划。多年的从业经验和广泛的市场体验，结合对互联网行业的深度了解，造就了团队在互联网品牌建设 和网络营销方面非凡的策划能力。从需求分析，项目实施到营销推广，全程融入了并连人深刻的策划思想。本地化顾问
+          式服务并连网络作为一家本地化的信息服务运营商，深谙企业客户的需求，将本地化、面对面、持续的顾问式服务作为帮助企业客户实现信息化 的主要服务方式。多年来并连公司为超过100家国内外企业客户提供精致的软件技术服务，
+          随时了解企业客户在不同发展阶段的个性需求 ，为企业客户提供针对性解决方案，伴随企业信息化建设的全过程，成为企业信息的忠实伙伴。公司凭借独特的企业文化、行业一流的企 业团队、正规的互联网服务和营运资质以及多年积累的服务经验，为您提供最富有价值的互联网解决方案。</div>
+      <div class="flex flex-wrap alcenter about-contact">
+        <div class="col-sm-12 col-md-5">天津知鱼网络科技有限公司 & 天津木姜子科技有限公司</div>
+        <div class="flex alcenter col-sm-6 col-md-4">
+          <img src="{% static 'images/about_iphone@2x.png' %}" alt="">
+          <div>电话: 13611267041 & 18210042149</div>
+        </div>
+        <div class="flex alcenter col-sm-6 col-md-3">
+          <img src="{% static 'images/about_mail@2x.png' %}" alt="">
+          <div>微信：同电话号码</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-item">
+      <div class="common-title">技术团队</div>
+      <div class="user-item flex">
+        <div class="user-left">
+          <img src="{% static 'images/guoshijiang.png' %}" alt="">
+          <div class="phone-number">手机号：13611267041</div>
+        </div>
+        <div class="user-detail flex-one">
+          <div class="user-name">郭世江-技术总监</div>
+          <div class="user-des">毕业于黑龙江大学，现为木姜子科技创始人兼CTO，曾任知名互联网公司架构师，先后任职于金证集团，
+              迪安体检，中信银行，华夏银行，神州数字集团，链上科技等公司，参与中信银行三方存管项目，B股，银衍项目的设计与开发，主导中信银行保证金系统设计开发，
+              主导超球球场项目架构设计和开发。独立设计开发华夏银行呼叫中心监控项目，参与linkeye公链开发，主导linkeye征信链，inkeye钱包，linkeye区块链浏览器和biwork钱包项目的架构设计和开发；
+              独立开发链上科技的多币种钱包；github 许多开源项目源码贡献者</div>
+        </div>
+        <div class="shape"></div>
+      </div>
+      <div class="user-item flex row-reverse">
+        <div class="user-left">
+          <img src="{% static 'images/guoshijiang.png' %}" alt="">
+          <div class="phone-number">手机号：18210042149</div>
+        </div>
+        <div class="user-detail flex-one">
+          <div class="user-name">苏镇-前端技术总监</div>
+          <div class="user-des">毕业于黑龙江大学。五年工作经验，精通JavaScript语言，熟悉多种前端开发框架，拥有对vue、angular、React, RN等主流框架开发使用的实战经验，掌握node、java等中台开发，可以独立使用node搭建服务端进行全栈开发。曾就职于北京中钢云和鼎阅集团，主导开发中钢云、中钢云物流app,打造钢铁行业的交易运输的领军者，负责原创部门的码字猫pc客户端产品研发，致力于打造离线实时保存、在线实时云同步的精品写作平台。主要负责产品前端开发、技术选型、项目管理，参与大数据等服务端开发。</div>
+        </div>
+        <div class="shape"></div>
+      </div>
+    </div>
+    <div class="content-item">
+      <div class="common-title">合作客户</div>
+      <div class="flex flex-wrap">
+        <div class="client-item">木姜子科技</div>
+        <div class="client-item">我问学院</div>
+        <div class="client-item">叮当猫舍</div>
+        <div class="client-item">巡宇投贷</div>
+        <div class="client-item">国邦科技</div>
+        <div class="client-item">知鱼财经</div>
+        <div class="client-item">阿里云</div>
+        <div class="client-item">Biwork</div>
+        <div class="client-item">西南家政</div>
+        <div class="client-item">家政服务超市</div>
+        <div class="client-item">搜米域名</div>
+        <div class="client-item">UmiCash</div>
+        <div class="client-item">TBS Wallet</div>
+        <div class="client-item">XQS Token</div>
+        <div class="client-item">FBT Wallet</div>
+      </div>
+    </div>
+    <div class="flex-center contact-contaienr">
+      <div class="contact-content">
+        <div class="flex alcenter">
+          <img src="{% static 'images/qq@2x.png' %}" alt="">
+          <div>QQ: 1294928442</div>
+        </div>
+        <div class="flex alcenter">
+          <img src="{% static 'images/index_zhidao@2x.png' %}" alt="">
+          <div>电话: 13611267041(微信同号)</div>
+        </div>
+        <div class="flex alcenter">
+          <img src="{% static 'images/youxiang@2x.png' %}" alt="">
+          <div>邮箱: mujiangzi2018@163.com</div>
+        </div>
+      </div>
+      <div class="code-container flex-column flex-center">
+        <img src="{% static 'images/weixin.png' %}" alt="" class="code-img">
+        <div>请关注官方微信号</div>
+      </div>
+    </div>
+  </div>
+  <div class="common-footer">
+    {% include 'front/layout/bottom.html' %}
+  </div>
+  <div class="apply-dialog">
+  {% include 'front/layout/message.html' %}
+  </div>
+{% endblock %}
+{% block script %}
+{% endblock %}
