@@ -36,7 +36,7 @@
   <div class="comment-list container">
     {% for comment in comment_list %}
     <div class="comment-item flex">
-      <img src="{% url 'index' %}media/{{ commet.photo }}" alt="" class="user-avatar">
+      <img src="{% url 'index' %}media/{{ comment.photo }}" alt="" class="user-avatar">
       <div class="flex-one comment-right">
         <div class="flex alcenter">
           <div class="user-name">{{ comment.name }}</div>

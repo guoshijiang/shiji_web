@@ -14,10 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include, re_path
+from django.views.static import serve
+from django.conf import settings
 from shiji.views import (
     index, product, dynamic, about, news,
-    comment, news_detail
+    comment, news_detail, online_msg
 )
 
 urlpatterns = [
@@ -29,4 +31,7 @@ urlpatterns = [
     path(r'comment', comment, name='comment'),
     path(r'<int:id>/news_detail', news_detail, name='news_detail'),
     path(r'about', about, name='about'),
+    path(r'online_msg', online_msg, name='online_msg'),
+    path('ueditor/', include('DjangoUeditor.urls')),  # 添加DjangoUeditor的URL
+    re_path('^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),  # 增加此行
 ]

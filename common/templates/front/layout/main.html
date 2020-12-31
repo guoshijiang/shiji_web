@@ -20,22 +20,75 @@
      {% endblock %}
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script>
-        $(function() {
-          // navbar
-          $('.nav-menu').click(function() {
-            if($(this).hasClass('active')){
-              $(this).removeClass('active')
-              $('.home-top').removeClass('active')
-              $('body').removeClass('body_no_scroll')
-              $('.nav-list').fadeOut()
-            }else{
-              $(this).addClass('active')
-              $('.home-top').addClass('active')
-              $('body').addClass('body_no_scroll')
-              $('.nav-list').fadeIn()
+    <script src="{% static 'js/jquery.toast.min.js' %}"></script>
+     <script>
+        function CreateMsg(obj){
+            url_href = window.location.href;
+            var index = url_href.lastIndexOf("\/");
+            var url_str = url_href.substring(0, index + 1);
+            var req_url = url_str + 'online_msg';
+            let user_name = $("input[name='user_name']").val();
+            let phone = $("input[name='phone']").val();
+            let weichat = $("input[name='weichat']").val();
+            let email = $("input[name='email']").val();
+            let describe = $("input[name='describe']").val();
+            if (user_name === ""){
+                showMsg("用户不能为空，请填写")
             }
-          })
+            if(!(/^1[3456789]d{9}$/.test(phone))){
+                showMsg("手机号码格式不正确，请检查后填写")
+            }
+            if (weichat === ""){
+                showMsg("微信不能为空，请填写")
+            }
+            if (email === ""){
+                showMsg("邮箱不能为空，请填写")
+            }
+            if (describe === ""){
+                showMsg("描述内容不能为空，请填写")
+            }
+            $.ajax({
+                url: req_url,
+                data: {
+                    "user_name": user_name,
+                    "phone":phone,
+                    "weichat":weichat,
+                    "email": email,
+                    "describe": describe,
+                },
+                type: 'GET',
+                dataType:'json',
+                success: function (data) {
+                    if (data.code === 0) {
+                        showMsg ('提交数据成功');
+                        window.location.reload();
+                    } else{
+                        showMsg ('提交数据成功');
+                        window.location.reload();
+                    }
+                },
+                error: function (data) {
+                   showMsg ('提交数据错误，请重新提交');
+                }
+            });
+        }
+
+        function showMsg(text, heading, icon) {
+            if (heading === undefined) {
+                let heading = "提示";
+            }
+            $.toast({
+                text: text,
+                heading: heading,
+                icon: icon,
+                position: 'top-center',
+                textAlign: 'left',
+                loader: false,
+                loaderBg: '#ffffff',
+            });
+        }
+
+        $(function() {
           // 申请试用
           $('.apply-btn').click(function() {
             $('.apply-dialog').fadeIn()

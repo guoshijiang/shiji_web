@@ -7,36 +7,26 @@
   <div class="dialog-form">
     <div class="form">
       <div class="form-group">
-        <label for="name">所在行业</label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="name">公司/个体<span class="required">*</span></label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="name">产品需求</label>
-        <select name="" id="" class="form-control">
-          <option value="">产品需求1</option>
-          <option value="">产品需求2</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="name">产品诉求</label>
-        <select name="" id="" class="form-control">
-          <option value="">产品诉求1</option>
-          <option value="">产品诉求2</option>
-        </select>
-      </div>
-      <div class="form-group">
         <label for="name">姓名<span class="required">*</span></label>
-        <input type="text" class="form-control">
+        <input type="text" name="user_name" class="form-control">
       </div>
       <div class="form-group">
         <label for="name">电话<span class="required">*</span></label>
-        <input type="text" class="form-control">
+        <input type="text" name="phone" class="form-control">
       </div>
-      <div class="submit-btn flex-center">立即试用</div>
+      <div class="form-group">
+        <label for="name">微信<span class="required">*</span></label>
+        <input type="text" name="weichat" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="name">邮箱<span class="required">*</span></label>
+        <input type="text" name="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="name">需求简述<span class="required">*</span></label>
+        <input type="text" name="describe" class="form-control describe">
+      </div>
+      <div class="submit-btn flex-center" onclick="CreateMsg(this)">立即试用</div>
     </div>
   </div>
 </div>
