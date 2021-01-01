@@ -41,14 +41,11 @@ def news_detail(request, id):
 
 
 def online_msg(request):
-    params = json.loads(request.body.decode())
-    print(params)
-    return ok_json(None)
-    user_name = params.get('user_name', "")
-    phone = params.get('phone', "")
-    weichat = params.get('weichat', "")
-    email = params.get('email', "")
-    describe = params.get('describe', "")
+    user_name = request.GET.get('user_name', "")
+    phone = request.GET.get('phone', "")
+    weichat = request.GET.get('weichat', "")
+    email = request.GET.get('email', "")
+    describe = request.GET.get('describe', "")
     OnlineMsg.objects.create(
         name=user_name,
         phone=phone,
