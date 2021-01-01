@@ -77,7 +77,6 @@
                 }
             });
         }
-
         function showMsg(text, heading, icon) {
             if (heading === undefined) {
                 let heading = "提示";
@@ -92,7 +91,31 @@
                 loaderBg: '#ffffff',
             });
         }
-
+        nav_mark = "{{ nav_mark }}";
+        if(nav_mark === 'index'){
+            $("#index").addClass('active')
+            $("#product").removeClass('active')
+            $("#dynamic").removeClass('active')
+            $("#about").removeClass('active')
+        }
+        if(nav_mark === 'product') {
+            $("#product").addClass('active')
+            $("#index").removeClass('active')
+            $("#dynamic").removeClass('active')
+            $("#about").removeClass('active')
+        }
+        if(nav_mark === 'dynamic') {
+            $("#dynamic").addClass('active')
+            $("#product").removeClass('active')
+            $("#index").removeClass('active')
+            $("#about").removeClass('active')
+        }
+        if(nav_mark === 'about') {
+            $("#about").addClass('active')
+            $("#dynamic").removeClass('active')
+            $("#product").removeClass('active')
+            $("#index").removeClass('active')
+        }
         $(function() {
           // 申请试用
           $('.apply-btn').click(function() {
