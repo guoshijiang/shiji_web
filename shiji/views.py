@@ -9,29 +9,35 @@ from common.helpers import ok_json
 
 def index(request):
     comment_list = Comment.objects.filter(is_del='NO').order_by("-id")[:3]
+    nav_mark = 'index'
     return render(request, 'front/index.html', locals())
 
 
 def product(request):
+    nav_mark = 'product'
     return render(request, 'front/product.html', locals())
 
 
 def dynamic(request):
+    nav_mark = 'dynamic'
     news_list = News.objects.filter(is_del='NO').order_by("-id")[:4]
     return render(request, 'front/dynamic.html', locals())
 
 
 def news(request):
+    nav_mark = 'news'
     news_list = News.objects.filter(is_del='NO').order_by("-id")
     return render(request, 'front/news.html', locals())
 
 
 def comment(request):
+    nav_mark = 'comment'
     comment_list = Comment.objects.filter(is_del='NO').order_by("-id")
     return render(request, 'front/comment.html', locals())
 
 
 def about(request):
+    nav_mark = 'about'
     return render(request, 'front/about.html', locals())
 
 
