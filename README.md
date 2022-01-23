@@ -40,6 +40,7 @@ pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 
 ### 3.关联项目
 
+后端代码： https://github.com/guoshijiang/ganji
 
 
 
